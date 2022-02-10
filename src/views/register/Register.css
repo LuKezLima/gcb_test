@@ -48,8 +48,22 @@ main{
     margin: 0 auto;
     width: 90%;
     overflow-x:auto;
-
 }
+
+#table::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  #table::-webkit-scrollbar-track {
+    background: rgba(154, 159, 235, 0.795);        /* color of the tracking area */
+  }
+  
+  #table::-webkit-scrollbar-thumb {
+    background-color: #060855a1;    /* color of the scroll thumb */
+    border-radius: 10px;       /* roundness of the scroll thumb */
+  }
+
+
 
 #data-table{
     width: 100%;

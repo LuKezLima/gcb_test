@@ -9,7 +9,7 @@ export default ()=> {
     return(
        <section className="home">
            <Header/>
-           <img src={mobileImage} alt="" />
+           <img src={mobileImage} alt="ilustration" />
            <div className="boxHome">
                <h1>Ready for
 Trying a new recipe?</h1>

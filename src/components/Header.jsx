@@ -15,7 +15,7 @@ export default ()=> {
     return(
       <header className="headerLand">
           <h2>Healthy Food</h2>
-          <img onClick={ e => toggleMenu()} src={mobileMenu ? menuHamburguer : close} alt="" />
+          <img onClick={ e => toggleMenu()} src={mobileMenu ? menuHamburguer : close} alt=" icon" />
           <nav id="nav" className={mobileMenu ? 'active' : 'disabled'}>
               <ul>
                   <li><a href="" className="u-hover--sparkle hvr-underline-from-center">Healthy recipes</a></li>

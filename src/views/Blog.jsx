@@ -50,13 +50,13 @@ export default ()=> {
             
                 {scrollX != 0 && (
                     <div className="blogRow--left" onClick={ e=> handleLeftArrow()}>
-                    <img src={arrow} alt="" />
+                    <img src={arrow} alt="icon-arrow" />
                     </div> 
                 )}
                     
             
             <div className="blogRow--right" onClick={ e => handleRightArrow()} >
-            <img src={arrow} alt="" />
+            <img src={arrow} alt="icon-arrow" />
             </div>
 
                 <div className="blogRow-list" id="blogRow--list"

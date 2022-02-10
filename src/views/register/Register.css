@@ -13,6 +13,10 @@ box-shadow: 3px 4px 13px 0px #d6d6d6;
 
 }
 
+#registers{
+    margin-bottom: 1rem;
+}
+
 #headers nav{
     display: flex;
     justify-content: space-between;

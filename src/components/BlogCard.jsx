@@ -7,7 +7,7 @@ export default ({imgBlog, title, authorName, imgAuthor})=> {
          <img src={imgBlog} alt=""/>
          <h3>{title}</h3>
          <div className="authorInfo">
-             <img src={imgAuthor} className="imgAuthor" alt="" />
+             <img src={imgAuthor} className="imgAuthor" alt="author´s photo" />
              <p>{authorName}</p>
          </div>
      </div>

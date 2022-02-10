@@ -8,8 +8,8 @@ import bgservicesMobile from '../assets/mobileImagens/serviceMobile.svg'
 export default ()=> {
     return(
        <section className="service">
-           <img src={bgservices} alt="" />
-           <img src={bgservicesMobile} id="serviceImgMobile" alt="" />
+           <img src={bgservices} alt="background" />
+           <img src={bgservicesMobile} id="serviceImgMobile" alt="background" />
            <div className="serviceInfo">
                <h2>The best services ready
 To serve you</h2>

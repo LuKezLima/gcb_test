@@ -9,7 +9,7 @@ export default ()=> {
     return(
         <>
        <section className="join">
-           <img src={joingBgMobile} id='bgMobileJoin' alt="" />
+           <img src={joingBgMobile} id='bgMobileJoin' alt="ilustration making a deal" />
             <div className="joinInfo">
             <h3>Join our membership
 to get special offer</h3>

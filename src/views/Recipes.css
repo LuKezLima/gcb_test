@@ -53,9 +53,12 @@
 
 @media (max-width: 400px){
     .recipesGroup{
-        align-items: center;
-        
+        align-items: center;  
       }
+
+      .recipe p{
+        width: 95%;
+    }
 
 }
     

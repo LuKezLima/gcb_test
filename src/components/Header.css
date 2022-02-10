@@ -84,3 +84,9 @@ header img{
         left: 0vw;
     }
 }
+
+@media screen and (max-width:690px){
+    header{
+        width: 90%;
+    }
+}

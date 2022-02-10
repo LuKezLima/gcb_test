@@ -116,6 +116,11 @@
         width: 2.3rem;
         height: 2.3rem;
     }
+
+    .blog p{
+        width: 85%;
+        
+    }
 }
 
 @media (max-width: 400px){

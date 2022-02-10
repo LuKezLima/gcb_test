@@ -120,7 +120,7 @@ form{
     grid-template-areas: "name name email"
                             "id birth zip"
                              "state city district"
-                             "street - -";
+                             "street - error";
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -181,6 +181,16 @@ i{
 #street{
 
     grid-area: street;
+}
+
+#idInput{
+    outline-color: red;
+}
+
+.errorMessage{
+    grid-area: error;
+    color: rgb(231, 13, 13);
+    align-self:center;
 }
 
 .input-group input{
@@ -254,7 +264,8 @@ form button:hover{
         "id birth"
         "zip state"
         "city district"
-        "street -" ;
+        "street error"
+        "- -" ;
 
     }
 
@@ -270,6 +281,11 @@ form button:hover{
 
     #registers{
         width: 90%;
+    }
+
+    #btnSave{
+        height: 2.5rem;
+        width: 100%;
     }
 
 

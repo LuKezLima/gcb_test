@@ -18,7 +18,7 @@ export default ()=> {
           <img onClick={ e => toggleMenu()} src={mobileMenu ? menuHamburguer : close} alt=" icon" />
           <nav id="nav" className={mobileMenu ? 'active' : 'disabled'}>
               <ul>
-                  <li><a href="" className="u-hover--sparkle hvr-underline-from-center">Healthy recipes</a></li>
+                  <li><a href="#blog" className="u-hover--sparkle hvr-underline-from-center">Healthy recipes</a></li>
                   <li><a href="" className="u-hover--sparkle hvr-underline-from-center">blog</a></li>
                   <li><a href="" className="u-hover--sparkle hvr-underline-from-center">join</a></li>
                   <li><Link to="/register" className="btn-register"  >register</Link></li>

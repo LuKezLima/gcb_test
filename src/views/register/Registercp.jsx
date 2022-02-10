@@ -30,6 +30,9 @@ export default (props) => {
     const [district,setDistrict] = useState('')
     const [street,setStreet] = useState('')
 
+    const [errorMessage,setErrorMessage] = useState(false)
+    const [errorMessageId,setErrorMessageId] = useState(false)
+
 
    
     async function getApi(zip){ // Função responsável por consumir a API de CEP
@@ -96,10 +99,11 @@ export default (props) => {
             setUser(aux)
         }))
       }
-
       const Validations = {
+        
         verifyID() //  Função responsável por verificar se o CPF digitado é válido
         {
+
             let idformated = id.replace('.', '').replace('.', '').replace('-', '')
             var Soma;
             var Resto;
@@ -111,14 +115,15 @@ export default (props) => {
           Resto = (Soma * 10) % 11;
         
             if ((Resto === 10) || (Resto === 11))  Resto = 0;
-            if (Resto !== parseInt(idformated.substring(9, 10)) ) return alert('CPF INVÁLIDO');
+            if (Resto !== parseInt(idformated.substring(9, 10)) ) return  setErrorMessageId(true);
         
           Soma = 0;
             for (i = 1; i <= 10; i++) Soma = Soma + parseInt(idformated.substring(i-1, i)) * (12 - i);
             Resto = (Soma * 10) % 11;
         
             if ((Resto === 10) || (Resto === 11))  Resto = 0;
-            if (Resto !== parseInt(idformated.substring(10, 11) ) ) return alert('CPF INVÁLIDO');
+            if (Resto !== parseInt(idformated.substring(10, 11) ) ) return setErrorMessageId(true);
+            setErrorMessageId(false)
             return true;
           },
 
@@ -190,8 +195,13 @@ export default (props) => {
                     </div>
                     
                     <div className="input-group" id="id">
-                        <label htmlFor="id">ID</label>
-                        <InputMask mask="999.999.999-99"
+                        <label style={{
+                            color: errorMessageId ? '#ff0000' : '#000'
+                        }} htmlFor="id">ID</label>
+                        <InputMask style={{
+                            outline: errorMessageId ? 'auto' : 'none',
+                            outlineColor:errorMessageId ? 'red' : 'black'
+                        }} id='idInput' autoFocus mask="999.999.999-99"
                         placeholder="ID"
                         value={id}
                         onChange={(e)=> setId(e.target.value)} />
@@ -257,11 +267,26 @@ export default (props) => {
                         if(Validations.verifyID() && Validations.verifyFields()){
                         addNewUser()
                         resetFields() 
+                        setErrorMessage(false)
+                        setErrorMessageId(false)
                             } else{
-                                alert("Verifique todos os campos")    
+                               Validations.verifyID ? setErrorMessage(true) : setErrorMessageId(true)
                          }  
                          
                      }}>Save</button>
+
+                     {errorMessageId && ( 
+                            <span className="errorMessage">Invalid ID!</span>
+                     )}
+                     {errorMessage && ( 
+                         <>
+                           
+                            <span className="errorMessage">
+                            <br></br> <br></br> Check all the fields!</span>
+                            </>
+                     )}
+                        
+                      
             </form>
         </div>
         <section id="registers">
@@ -284,7 +309,6 @@ export default (props) => {
             
                     </thead>
                     <tbody id="tbody">
-                     
                         {listUsers}
                     </tbody>
 

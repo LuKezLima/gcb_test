@@ -1,0 +1,276 @@
+#headers{
+    width: 90%;
+max-width: 1728px;
+margin: 0 auto;
+height: 5vw;
+min-height: 4rem;
+max-height:10rem;
+padding: 0 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 3px 4px 13px 0px #d6d6d6;
+
+}
+
+#headers nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center; 
+    position: relative; 
+    border-bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+#headers nav h1 > a {
+    color: var(--primary-color);
+      font-size: var(--step-1);
+}
+
+#headers nav ul li a {
+    color: var(--primary-color);
+    font-size: var(--step--0);
+    align-self: center;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#table{
+    margin: 0 auto;
+    width: 90%;
+    overflow-x:auto;
+
+}
+
+#data-table{
+    width: 100%;
+    border-spacing: 1rem;
+    color: #ffffff;
+}
+
+table tbody tr{
+    opacity: 1;
+}
+table  tbody tr:hover{
+    opacity: 0.9;
+}
+
+
+table th{
+    background: var(--primary-color);
+    font-weight: normal;
+    padding: .7rem .5rem;
+    text-align: left;
+    font-size: var(--step--0);
+    border-radius: 5px 5px 0 0;
+  
+}
+table td{
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 1rem;
+    box-shadow: 5px 5px 15px 0px #d6d6d6;
+    color: var(--secondary-color);
+    font-size: var(--step--1);
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+}
+#form{  
+    background-color:#ffffff; 
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 15px 0px #d6d6d6;
+    margin-top: 2rem;
+}
+
+form{
+    margin-top: 2rem;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100x, 1fr));
+    grid-template-areas: "name name email"
+                            "id birth zip"
+                             "state city district"
+                             "street - -";
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#form h2{
+    margin-top: 1rem;
+    font-size: var(--step-2);
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+i{
+    cursor: pointer;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+}
+
+#name{
+    grid-area: name;
+}
+
+#name input{
+    width: 100%;
+}
+
+#email{
+   
+    grid-area: email;
+}
+#id{
+   
+    grid-area: id;
+}
+#birth{
+    grid-area: birth;
+}
+#zip{
+  
+    grid-area: zip;
+}
+#district{
+    
+    grid-area: district;
+}
+#state{
+   
+    grid-area: state
+        
+}
+#city{
+  
+    grid-area: city;
+}
+#street{
+
+    grid-area: street;
+}
+
+.input-group input{
+    border: none;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    outline: none;
+    background-color:#a1a1a123;
+    color: black;
+    font-weight: bold;
+    font-size: var(--step--1);
+    width: 100%;
+    margin: .5rem 0
+}
+
+.input-group input:read-only{
+    background-color: rgb(202, 199, 199);
+    color: rgb(138, 138, 138);
+  
+}
+
+.input-group  input:focus{
+    border: .5px solid black;
+}
+.input-group  label{
+    font-size: var(--step--0);
+    color: black;
+    font-family: var(--montserrat-ff);
+}
+
+
+
+
+form button{
+    border: none;
+    border-radius: .5rem;
+    background-color: #241d52;
+    cursor: pointer;
+    color: #fff;
+    font-size: var(--step--1);
+    width: 60%;
+    align-self: flex-end;
+    height: 50%;
+    margin-bottom: .5rem;
+}
+
+
+form button:hover{
+    opacity: 0.9;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px){
+    #headers nav{
+        margin-bottom: 4rem;
+    
+    }
+}
+
+
+@media screen and (max-width: 870px) {
+   
+
+    form{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name email"
+        "id birth"
+        "zip state"
+        "city district"
+        "street -" ;
+
+    }
+
+    #form{
+        width: 90%;
+
+    }
+
+    #table{
+        
+        width: auto;
+    }
+
+    #registers{
+        width: 90%;
+    }
+
+
+        table th{
+          
+            padding: .5rem .3rem;
+    
+            font-size: var(--step--0);
+           
+          
+        }
+        table td{
+        
+            padding: .6rem .6rem;
+        
+            font-size: var(--step--1);
+    
+        }
+
+  
+}
+

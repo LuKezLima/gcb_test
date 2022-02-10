@@ -1,0 +1,126 @@
+/* #bg-home{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+} */
+
+.home{
+    background-image: url(../assets/imagens/Illustration.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    display: flex;
+    flex-direction: column;
+    gap: 10vw;
+    height:760px;
+   
+}
+
+.home > img{
+    display: none;
+}
+
+.boxHome{
+    width: 80%;
+    padding: 1rem;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vh + .3rem, 3rem);
+}
+
+.boxHome h1{
+    color: var(--secondary-color);
+    width: 42%;
+    font-size: var(--step-3);
+    letter-spacing: 3px;
+    line-height: 3.5rem;
+}
+
+.inputRecipe input{
+    width: 30%;
+    margin-right: 1.4rem;
+}
+
+.inputRecipe input::placeholder{
+    opacity: .7;
+}
+
+.inputRecipe{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.inputRecipe button{
+    height: 6vh;
+    min-height: 3rem;
+    max-height: 4rem;
+    border-radius: .3rem;
+    width: 5%;
+    background-image: url(../assets/imagens/searchIcon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+@media (max-width: 1265px){
+    .home{
+        background-size: 60%;
+        height: 52vw;
+    }
+}
+
+@media (max-width: 1024px){
+    .home{
+        background-image: none;
+        align-items: center;
+        height: auto;
+        gap: 1.5rem;
+    }
+
+    .home > img{
+        display: block;
+        width: 40%;
+    }
+
+   
+        .boxHome h1{
+            color: var(--secondary-color);
+            width: 100%;
+            text-align: center;
+            font-size: var(--step-3);
+            letter-spacing: 3px;
+            line-height: 2.4rem;
+        }
+        
+        .inputRecipe input{
+            width: 80%;
+            margin-right: 1.4rem;
+        }
+        .inputRecipe button{
+            width: 15%;
+            max-width: 80px;
+            background-size: 50%;
+        }
+    
+}
+
+@media (max-width: 400px){
+    .boxHome{
+        width: 100%;
+       
+    }
+    .inputRecipe input{
+        width: 90%;
+        margin-right: 1.4rem;
+    }
+    .inputRecipe button{
+        width: 15%;
+
+        background-size: 40%;
+    }
+
+    }
+    
+

@@ -276,13 +276,14 @@ export default (props) => {
                      }}>Save</button>
 
                      {errorMessageId && ( 
-                            <span className="errorMessage">Invalid ID!</span>
+                            <span className="errorMessage">Invalid ID! </span>
+                            
                      )}
                      {errorMessage && ( 
                          <>
                            
                             <span className="errorMessage">
-                            <br></br> <br></br> Check all the fields!</span>
+                            <br></br> <br></br> <br></br> Check all the fields!</span>
                             </>
                      )}
                         
